@@ -1,6 +1,9 @@
 class NotesApplication(object):
 	def __init__(self,author):
-		self.author = author
+		if author == None:
+			self.author = None
+		else:
+			self.author = author
 		self.notes_list = []
 		
 	def create(self, note_content):
